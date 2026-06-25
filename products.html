@@ -32,18 +32,27 @@
 
     <h1>Our Collection</h1>
 
-    <div class="filter-buttons">
-    <a href="#all">All</a>
-    <a href="#set">Sets</a>
-    <a href="#ring">Rings</a>
-    <a href="#earring">Earrings</a>
-    <a href="#necklace">Necklaces</a>
-    <a href="#bangle">Bangles</a>
+<input type="radio" name="filter" id="all" checked>
+<input type="radio" name="filter" id="set">
+<input type="radio" name="filter" id="ring">
+<input type="radio" name="filter" id="earring">
+<input type="radio" name="filter" id="necklace">
+<input type="radio" name="filter" id="bangle">
+
+
+<div class="filter-buttons">
+<label for="all">All</label>
+<label for="set">Sets</label>
+<label for="ring">Rings</label>
+<label for="earring">Earrings</label>
+<label for="necklace">Necklaces</label>
+<label for="bangle">Bangles</label>
 </div>
 
-    <div class="products">
 
-        <div class="card set">
+<div class="products">
+
+        <div id="set" class="card set">
             <img src="images/set1.jpg" alt="">
             <h3>Golden Fox Set</h3>
             <h3>$20</h3>
@@ -57,7 +66,7 @@
     </div>
 
     
-    <div class="card set">
+        <div id="set" class="card set">
             <img src="images/set2.jpg" alt="">
             <h3>Blessings Set Set</h3>
             <h3>$20</h3>
@@ -70,7 +79,7 @@
         </div> 
     </div>
 
-    <div class="card set">
+    <div id="set" class="card set">
             <img src="images/set3.jpg" alt="">
             <h3>Lucky Set</h3>
             <h3>$20</h3>
@@ -83,7 +92,7 @@
         </div> 
     </div>
 
-    <div class="card set">
+    <div id="set" class="card set">
             <img src="images/set4.jpg" alt="">
             <h3>Wealthy Set</h3>
             <h3>$20</h3>
@@ -96,7 +105,7 @@
         </div> 
     </div>
 
-        <div class="card ring">
+        <div id="ring" class="card ring">
             <img src="images/ring1.jpg" alt="">
             <h3>Elegant Gold Diamond Ring</h3>
             <h3>$114</h3>
@@ -108,7 +117,7 @@
         </div> 
     </div>
 
-    <div class="card ring">
+    <div id="ring" class="card ring">
             <img src="images/ring2.jpg" alt="">
             <h3>Delicate Gold Leaf Engagemen Ring</h3>
             <h3>$291</h3>
@@ -120,7 +129,7 @@
         </div> 
     </div>
 
-    <div class="card ring">
+    <div id="ring" class="card ring">
             <img src="images/ring3.jpg" alt="">
             <h3>Floral Leafy Round Cut Ring</h3>
             <h3>$160</h3>
@@ -132,7 +141,7 @@
         </div> 
     </div>
 
-    <div class="card ring">
+    <div id="ring" class="card ring">
             <img src="images/ring4.jpg" alt="">
             <h3>Round Diamond Ring</h3>
             <h3>$185</h3>
@@ -145,7 +154,7 @@
     </div>
 
 
-        <div class="card earring">
+        <div id="earring" class="card earring">
             <img src="images/ear1.jpg" alt="">
             <h3>Butterfly Earrings</h3>
             <h3>$90</h3>
@@ -157,7 +166,7 @@
         </div> 
     </div>
 
-    <div class="card earring">
+    <div id="earring" class="card earring">
             <img src="images/ear2.jpg" alt="">
             <h3>Aurora Huggies Earrings</h3>
             <h3>$110</h3>
@@ -169,7 +178,7 @@
         </div> 
     </div>
 
-    <div class="card earring">
+    <div id="earring" class="card earring">
             <img src="images/ear3.jpg" alt="">
             <h3>Floral Earrings</h3>
             <h3>$450</h3>
@@ -181,7 +190,7 @@
         </div> 
     </div>
 
-    <div class="card earring">
+    <div id="earring" class="card earring">
             <img src="images/ear4.jpg" alt="">
             <h3>Cat's Eye Stone Tassel Earrings</h3>
             <h3>$321</h3>
@@ -194,7 +203,7 @@
     </div>
 
 
-        <div class="card necklace">
+        <div id="necklace" class="card necklace">
             <img src="images/nack1.jpg" alt="">
             <h3>Elegant Gold Necklace</h3>
             <h3>$500</h3>
@@ -206,7 +215,7 @@
         </div> 
     </div>
 
-    <div class="card necklace">
+    <div id="necklace" class="card necklace">
             <img src="images/nack2.jpg" alt="">
             <h3>Elegant Gold Pearl Necklace</h3>
             <h3>$390</h3>
@@ -218,7 +227,7 @@
         </div> 
     </div>
 
-    <div class="card necklace">
+    <div id="necklace" class="card necklace">
             <img src="images/nack3.jpg" alt="">
             <h3>Pear Diamond Necklace</h3>
             <h3>$365</h3>
@@ -230,7 +239,7 @@
         </div> 
     </div>
 
-    <div class="card necklace">
+    <div id="necklace" class="card necklace">
             <img src="images/nack4.jpg" alt="">
             <h3>Floral Necklace</h3>
             <h3>$682</h3>
@@ -243,8 +252,8 @@
     </div>
 
 
-        <div class="card bangle">
-            <img src="images/ba1.jpg" alt="">
+        <div id="bangle" class="card bangle">
+            <img src="images/b1.jpg" alt="">
             <h3>Bamboo Style Bangle</h3>
             <h3>$122</h3>
 
@@ -255,7 +264,7 @@
         </div> 
     </div>
 
-    <div class="card bangle">
+    <div id="bangle" class="card bangle">
             <img src="images/b2.jpg" alt="">
             <h3>Flower Bangle</h3>
             <h3>$90</h3>
@@ -267,7 +276,7 @@
         </div> 
     </div>
 
-    <div class="card bangle">
+    <div id="bangle" class="card bangle">
             <img src="images/b3.jpg" alt="">
             <h3>Lotus Diamond Bangle</h3>
             <h3>$256</h3>
@@ -279,7 +288,7 @@
         </div> 
     </div>
 
-    <div class="card bangle">
+    <div id="bangle" class="card bangle">
             <img src="images/b4.jpg" alt="">
             <h3>Heart Shaped Bangle</h3>
             <h3>$99</h3>

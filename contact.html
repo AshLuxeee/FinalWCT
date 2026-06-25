@@ -9,12 +9,16 @@
 <header>
     <nav>
         <div class="logo">Ash Luxe</div>
-        <div class="hamburger" onclick="toggleMenu()">
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-        <ul id="menu">
+        </label>
+
+        <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -50,12 +54,5 @@
 <footer>
     <p>© 2026 Ash Luxe</p>
 </footer>
-
-<script>
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-}
-</script>
-
 </body>
 </html>
