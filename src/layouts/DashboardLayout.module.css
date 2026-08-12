@@ -1,0 +1,266 @@
+.layoutContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f7f9fc;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar {
+  width: 270px;
+  background-color: #0c0b24;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  z-index: 1010;
+}
+
+.brand {
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.brand p {
+  margin: 2px 0 0 0;
+  font-size: 0.75rem;
+  color: #727184;
+}
+
+.nav {
+  padding: 12px 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+}
+
+.navItem {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #7f7e96;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #fff;
+}
+
+.navItem.active {
+  background-color: #4b36c4;
+  color: #fff;
+}
+
+.logout {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 24px;
+  margin-bottom: 12px;
+}
+
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  min-width: 0; /* Prevents layout blowout */
+}
+
+.header {
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 1px solid #edf2f9;
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menuToggle {
+  background: none;
+  border: none;
+  color: #636e72;
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.menuToggle:hover {
+  background-color: #f1f5f9;
+}
+
+.headerTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.notification {
+  position: relative;
+  cursor: pointer;
+  color: #7f8c8d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 50%;
+}
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #6c5ce7;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.userDetails {
+  text-align: left;
+}
+
+.userDetails h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.userDetails p {
+  margin: 2px 0 0 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.contentBody {
+  padding: 40px;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+/* Sidebar backdrop overlay on mobile */
+.sidebarBackdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+/* === Responsive Breakpoints === */
+
+/* Tablets and Mobiles */
+@media (max-width: 991px) {
+  .menuToggle {
+    display: flex; /* Show menu toggle button */
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar.sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .sidebarBackdrop {
+    display: block; /* Show backdrop when sidebar open */
+  }
+
+  .header {
+    padding: 0 24px;
+    height: 70px;
+  }
+
+  .contentBody {
+    padding: 24px;
+  }
+}
+
+/* Mobiles only */
+@media (max-width: 575px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .headerTitle {
+    font-size: 1.1rem;
+  }
+
+  .userDetails {
+    display: none; /* Hide profile name text on small mobiles to fit header */
+  }
+
+  .userProfile {
+    gap: 12px;
+  }
+
+  .contentBody {
+    padding: 16px;
+  }
+}
