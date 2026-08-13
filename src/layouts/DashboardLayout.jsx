@@ -89,7 +89,7 @@ export default function DashboardLayout() {
         <div className={styles.brand}>
           <Gem size={32} color="#eab308" />
           <div>
-            <h2 style={{ fontFamily: "'Georgia', serif", letterSpacing: '1px' }}>Ashluxe</h2>
+            <h2 style={{ fontFamily: "'Playfair Display', 'Georgia', serif", letterSpacing: '1px' }}>Ashluxe</h2>
             <p>{userRole === 'admin' ? 'Admin Panel' : 'Jewelry Store'}</p>
           </div>
         </div>

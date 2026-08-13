@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { Menu as MenuIcon, X as XIcon } from 'lucide-react';
+import { Menu as MenuIcon, X as XIcon, Mail, Phone, MapPin, Send } from 'lucide-react';
 
 import heroBg from '../../images/backgroud.jpg';
 import founderImg from '../../images/me.jpg';
@@ -255,22 +255,64 @@ function Landing() {
       {activePage === 'contact' && (
         <main className="page-section">
           <section className="section contact-card">
-            <div>
-              <p className="eyebrow">Client services</p>
-              <h2>Let’s connect</h2>
-              <p>We are honored to assist you with any questions about our collections or orders.</p>
-              <form className="contact-form">
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="Your Email" />
-                <textarea rows="5" placeholder="Your Message" />
-                <button type="submit">Send Message</button>
+            <div className="contact-form-container">
+              <span className="eyebrow">Client Services</span>
+              <h2>Let's Connect</h2>
+              <p className="contact-subtitle">We are honored to assist you with any questions about our collections or orders.</p>
+              <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+                <div className="input-group">
+                  <input type="text" id="name" required placeholder=" " />
+                  <label htmlFor="name">Your Name</label>
+                </div>
+                <div className="input-group">
+                  <input type="email" id="email" required placeholder=" " />
+                  <label htmlFor="email">Your Email</label>
+                </div>
+                <div className="input-group">
+                  <textarea id="message" rows="5" required placeholder=" "></textarea>
+                  <label htmlFor="message">Your Message</label>
+                </div>
+                <button type="submit" className="submit-btn">
+                  <span>Send Message</span>
+                  <Send size={16} />
+                </button>
               </form>
             </div>
-            <div className="contact-details">
-              <h3>Contact details</h3>
-              <p>📧 horng4061@gmail.com</p>
-              <p>☎️ 096 404 7035</p>
-              <p>📍 Chrouy Chongva, Phnom Penh, Cambodia</p>
+            <div className="contact-info-panel">
+              <h3>Contact Details</h3>
+              <p className="panel-desc">Reach out directly or visit us. We look forward to hearing from you.</p>
+              
+              <div className="contact-info-list">
+                <a href="mailto:horng4061@gmail.com" className="contact-info-item">
+                  <div className="icon-box">
+                    <Mail size={20} />
+                  </div>
+                  <div className="info-text">
+                    <span className="info-label">Email Us</span>
+                    <span className="info-value">horng4061@gmail.com</span>
+                  </div>
+                </a>
+
+                <a href="tel:0964047035" className="contact-info-item">
+                  <div className="icon-box">
+                    <Phone size={20} />
+                  </div>
+                  <div className="info-text">
+                    <span className="info-label">Call Us</span>
+                    <span className="info-value">096 404 7035</span>
+                  </div>
+                </a>
+
+                <div className="contact-info-item">
+                  <div className="icon-box">
+                    <MapPin size={20} />
+                  </div>
+                  <div className="info-text">
+                    <span className="info-label">Location</span>
+                    <span className="info-value">Chrouy Chongva, Phnom Penh, Cambodia</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </main>
